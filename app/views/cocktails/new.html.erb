@@ -5,7 +5,8 @@
         <%= simple_form_for @cocktail do |f| %>
           <%= f.input :name %>
           <%= @ingredients %>
-          <%= f.check_box :ingredients, collection: @ingredients %>
+          <% f.input :ingredients, checkbox: @ingredients.each do |ingredient| %>
+            <%= ingredient.name %>
           <%= f.button :submit %>
         <% end %>
       <%= link_to 'Cancel', cocktails_path %>

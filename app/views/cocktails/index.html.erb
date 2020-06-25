@@ -1,13 +1,12 @@
-<h1>Let's get wasted!</h1>
-
-<%= link_to 'Add a Cocktail', new_cocktail_path %>
-
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <strong><%= cocktail.name %></strong><br>
-      <%= link_to 'Ckeck it out', cocktail_path(cocktail), class: "btn btn-primary" %>
-
-    </li><br>
-  <% end %>
-</ul>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-6 mx-auto'>
+      <h1>Let's get wasted!</h1>
+      <%= link_to 'Add a Cocktail', new_cocktail_path %><br>
+        <% @cocktails.each do |cocktail| %>
+            <strong><%= cocktail.name %></strong>
+            <%= link_to 'Ckeck it out', cocktail_path(cocktail), class: "btn btn-primary" %><br>
+        <% end %>
+    </div>
+  </div>
+</div>

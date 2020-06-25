@@ -1,4 +1,8 @@
 class DosesController < ApplicationController
+  def index
+    @doses = Dose.all
+  end
+
   def new
     @dose = Dose.new
   end

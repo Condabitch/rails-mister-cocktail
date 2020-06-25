@@ -5,11 +5,13 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
-    @doses
+    @doses = @cocktail.doses
   end
 
   def new
     @cocktail = Cocktail.new
+    @ingredients
+    @doses
   end
 
   def create
